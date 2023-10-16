@@ -44,8 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cec136edd242bc4da4e58e1f8c180d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicTrackSource: {fileID: -8920002243735869188}
-  settings: {fileID: 11400000, guid: a72b2454cc2b7fd479b787640a099c3e, type: 2}
+  _settings: {fileID: 11400000, guid: a72b2454cc2b7fd479b787640a099c3e, type: 2}
 --- !u!82 &-8920002243735869188
 AudioSource:
   m_ObjectHideFlags: 0
