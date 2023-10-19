@@ -3932,12 +3932,12 @@ PrefabInstance:
     - target: {fileID: 1703454514184546904, guid: 9b52da07b518b0845a88666a089664bd,
         type: 3}
       propertyPath: _maxLaunchRandomDirection.x
-      value: 0.85
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1703454514184546904, guid: 9b52da07b518b0845a88666a089664bd,
         type: 3}
       propertyPath: _minLaunchRandomDirection.x
-      value: -0.85
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2424792529215934033, guid: 9b52da07b518b0845a88666a089664bd,
         type: 3}

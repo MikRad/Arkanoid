@@ -104,7 +104,7 @@ MonoBehaviour:
   _type: 4
   _isUnderstroyable: 0
   _isInvisible: 0
-  _explosionRadius: 2.5
+  _explosionRadius: 1.4
   _pickUpPrefabs:
   - {fileID: 5481532415568982657, guid: 27b03bdcd0eead44da92d7e1864d6ba5, type: 3}
   - {fileID: 8893335609832505712, guid: 520b0db027a15e845818a90f1dd691f7, type: 3}
@@ -117,7 +117,7 @@ MonoBehaviour:
   - {fileID: 986349271762782573, guid: 3aafa8c2387a8374798a92723bccad56, type: 3}
   - {fileID: 986349271762782573, guid: ba1c0c12a4c87bd49a979ae73ab31b9b, type: 3}
   - {fileID: 986349271762782573, guid: ad8fe19c83029f1469edc8c95c303d14, type: 3}
-  _bonusGenerationProbability: 30
+  _pickupGenerationProbability: 30
 --- !u!61 &2494338831494089745
 BoxCollider2D:
   m_ObjectHideFlags: 0

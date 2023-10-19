@@ -46,8 +46,8 @@ MonoBehaviour:
   prefab: {fileID: 4461582919175323841, guid: 86e21a263a556284987efaded6cc1a90, type: 3}
   notification: 3
   strategy: 0
-  preload: 5
-  capacity: 5
+  preload: 7
+  capacity: 7
   recycle: 0
   persist: 0
   stamp: 0
@@ -102,8 +102,8 @@ MonoBehaviour:
   prefab: {fileID: 180128, guid: 6586ff0f14125534cae2f5d8f04b7871, type: 3}
   notification: 3
   strategy: 0
-  preload: 7
-  capacity: 7
+  preload: 15
+  capacity: 15
   recycle: 0
   persist: 0
   stamp: 0
@@ -158,8 +158,8 @@ MonoBehaviour:
   prefab: {fileID: 180128, guid: 9403df87d594b554ca6e9fa913165859, type: 3}
   notification: 3
   strategy: 0
-  preload: 7
-  capacity: 7
+  preload: 10
+  capacity: 10
   recycle: 0
   persist: 0
   stamp: 0
@@ -214,8 +214,8 @@ MonoBehaviour:
   prefab: {fileID: 180128, guid: d6df793bde79de444a307fd9f80c751d, type: 3}
   notification: 3
   strategy: 0
-  preload: 7
-  capacity: 7
+  preload: 10
+  capacity: 10
   recycle: 0
   persist: 0
   stamp: 0
@@ -307,8 +307,8 @@ MonoBehaviour:
   prefab: {fileID: 180128, guid: 74909ea0653fd374ea960909c1e78ebe, type: 3}
   notification: 3
   strategy: 0
-  preload: 5
-  capacity: 5
+  preload: 10
+  capacity: 10
   recycle: 0
   persist: 0
   stamp: 0
@@ -363,8 +363,8 @@ MonoBehaviour:
   prefab: {fileID: 9010104014525613150, guid: 2803d09f2a99f4e4aa35cb3925c4edbd, type: 3}
   notification: 3
   strategy: 0
-  preload: 5
-  capacity: 5
+  preload: 15
+  capacity: 15
   recycle: 0
   persist: 0
   stamp: 0
@@ -428,7 +428,7 @@ MonoBehaviour:
     type: 3}
   _flyingMessagePrefab: {fileID: 6902065722429823327, guid: 3fc226601ec5c834db0e8df010d39404,
     type: 3}
-  _fxDestroyTime: 2
+  _fxDestroyTime: 1.5
 --- !u!1 &7806069233714686293
 GameObject:
   m_ObjectHideFlags: 0

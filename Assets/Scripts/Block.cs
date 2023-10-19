@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+[RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(SpriteRenderer))]
 public class Block : MonoBehaviour
 {
@@ -27,6 +29,7 @@ public class Block : MonoBehaviour
     [SerializeField] private int _pickupGenerationProbability = 30;
 
     private SpriteRenderer _spriteRenderer;
+    private Collider2D _collider2D;
     private Transform _cachedTransform;
 
     private int _currentHitsNumber;
@@ -40,6 +43,7 @@ public class Block : MonoBehaviour
 
     private void Awake()
     {
+        _collider2D = GetComponent<Collider2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         
         _cachedTransform = transform;
@@ -57,7 +61,7 @@ public class Block : MonoBehaviour
         OnCreated?.Invoke(this);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D()
     {
         if(_isInvisible)
         {
@@ -129,16 +133,31 @@ public class Block : MonoBehaviour
         OnDestroyed?.Invoke(this);
     }
 
+    private void HandleDelayedDestroy(float delay)
+    {
+        StartCoroutine(UpdateDelayedDestroy(delay));
+    }
+
+    private IEnumerator UpdateDelayedDestroy(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        
+        Destroy();
+    }
+    
     private void LaunchExplosion()
     {
+        _collider2D.enabled = false;
+        
         LayerMask lMask = LayerMask.GetMask(LayerNames.Block);
         Collider2D[] objectsInRadius = Physics2D.OverlapCircleAll(_cachedTransform.position, _explosionRadius, lMask);
-        
-        foreach (Collider2D obj in objectsInRadius)
+
+        for (int i = 0; i < objectsInRadius.Length; i++)
         {
+            Collider2D obj = objectsInRadius[i];
             if (obj.gameObject.TryGetComponent(out Block block))
             {
-                block.Destroy();
+                block.HandleDelayedDestroy(i * 0.05f);
             }
         }
     }
